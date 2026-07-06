@@ -1,0 +1,56 @@
+{% extends "dashboard/base_dashboard.html" %}
+{% block title %}Profile - {{ app_name }}{% endblock %}
+{% block dashboard_content %}
+<div class="feature-page">
+  <div class="profile-header card reveal">
+    <div class="profile-avatar">{{ user.UserName[0]|upper }}</div>
+    <div class="profile-info">
+      <h1>{{ user.UserName }}</h1>
+      <p>{{ user.Email }}</p>
+      <p class="muted">Member since {{ user.CreatedAt[:10] }}</p>
+    </div>
+    <button class="btn btn-outline" id="editProfileBtn"><i class="fas fa-edit"></i> Edit Profile</button>
+  </div>
+
+  <div class="stats-grid reveal">
+    <div class="stat-card"><div class="stat-info"><span class="stat-value">{{ stats.QuestionsAsked }}</span><span class="stat-label">Questions</span></div></div>
+    <div class="stat-card"><div class="stat-info"><span class="stat-value">{{ stats.QuizzesTaken }}</span><span class="stat-label">Quizzes</span></div></div>
+    <div class="stat-card"><div class="stat-info"><span class="stat-value">{{ stats.SummariesCreated }}</span><span class="stat-label">Summaries</span></div></div>
+    <div class="stat-card"><div class="stat-info"><span class="stat-value">{{ stats.Streak }}</span><span class="stat-label">Day Streak</span></div></div>
+  </div>
+
+  <div class="dashboard-grid reveal">
+    <div class="card">
+      <h3><i class="fas fa-trophy"></i> Achievements</h3>
+      <div class="badges-grid">
+        {% for badge in stats.Badges %}
+        <span class="badge-item earned"><i class="fas fa-medal"></i> {{ badge }}</span>
+        {% else %}
+        <p class="muted">Keep learning to unlock achievements!</p>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="card">
+      <h3><i class="fas fa-chart-line"></i> Progress</h3>
+      <div class="progress-item">
+        <label>Weekly Goal</label>
+        <div class="progress-bar"><div class="progress-fill" style="width: {{ (stats.WeeklyProgress / stats.WeeklyGoal * 100) if stats.WeeklyGoal else 0 }}%"></div></div>
+        <span>{{ stats.WeeklyProgress }} / {{ stats.WeeklyGoal }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="editModal">
+    <div class="modal-content card">
+      <h3>Edit Profile</h3>
+      <div class="form-group"><label>Username</label><input type="text" id="editUsername" value="{{ user.UserName }}"></div>
+      <div class="form-group"><label>Email</label><input type="email" id="editEmail" value="{{ user.Email }}"></div>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="cancelEdit">Cancel</button>
+        <button class="btn btn-primary" id="saveProfile">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block page_js %}<script src="/static/js/profile.js"></script>{% endblock %}

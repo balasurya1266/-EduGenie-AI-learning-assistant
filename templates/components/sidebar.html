@@ -1,0 +1,42 @@
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <a href="/dashboard" class="logo">
+      <i class="fas fa-graduation-cap"></i>
+      <span>{{ app_name }}</span>
+    </a>
+    <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar"><i class="fas fa-times"></i></button>
+  </div>
+  <nav class="sidebar-nav">
+    <a href="/dashboard" class="nav-item {% if active == 'home' %}active{% endif %}">
+      <i class="fas fa-home"></i><span>Home</span>
+    </a>
+    <a href="/ask" class="nav-item {% if active == 'ask' %}active{% endif %}">
+      <i class="fas fa-comments"></i><span>Ask AI</span>
+    </a>
+    <a href="/explain" class="nav-item {% if active == 'explain' %}active{% endif %}">
+      <i class="fas fa-lightbulb"></i><span>Explain</span>
+    </a>
+    <a href="/quiz" class="nav-item {% if active == 'quiz' %}active{% endif %}">
+      <i class="fas fa-clipboard-check"></i><span>Quiz</span>
+    </a>
+    <a href="/summary" class="nav-item {% if active == 'summary' %}active{% endif %}">
+      <i class="fas fa-file-alt"></i><span>Summary</span>
+    </a>
+    <a href="/learning-path" class="nav-item {% if active == 'learning-path' %}active{% endif %}">
+      <i class="fas fa-route"></i><span>Learning Path</span>
+    </a>
+    <div class="nav-divider"></div>
+    <a href="/history" class="nav-item {% if active == 'history' %}active{% endif %}">
+      <i class="fas fa-history"></i><span>History</span>
+    </a>
+    <a href="/profile" class="nav-item {% if active == 'profile' %}active{% endif %}">
+      <i class="fas fa-user"></i><span>Profile</span>
+    </a>
+    <a href="/settings" class="nav-item {% if active == 'settings' %}active{% endif %}">
+      <i class="fas fa-cog"></i><span>Settings</span>
+    </a>
+  </nav>
+  <div class="sidebar-footer">
+    <a href="/logout" class="nav-item logout"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
+  </div>
+</aside>

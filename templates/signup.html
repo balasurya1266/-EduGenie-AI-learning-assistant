@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Sign Up - {{ app_name }}{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="/static/css/auth.css">{% endblock %}
+{% block body %}
+<div class="auth-split">
+  <!-- Brand Panel -->
+  <div class="auth-brand">
+    <div class="auth-brand-bg">
+      <div class="mesh-gradient"></div>
+      <div class="floating-orb orb-1"></div>
+      <div class="floating-orb orb-2"></div>
+      <div class="floating-orb orb-3"></div>
+    </div>
+    <div class="auth-brand-content">
+      <a href="/" class="brand-logo">
+        <div class="logo-icon"><i class="fas fa-graduation-cap"></i></div>
+        <span>EduGenie</span>
+      </a>
+      <h2>Start Your<br><span class="highlight">Learning</span> Journey</h2>
+      <p>Join thousands of students using AI to study smarter, not harder.</p>
+      <div class="brand-features">
+        <div class="brand-feature"><i class="fas fa-star"></i> Ask AI any question</div>
+        <div class="brand-feature"><i class="fas fa-star"></i> Generate practice quizzes</div>
+        <div class="brand-feature"><i class="fas fa-star"></i> Track your progress</div>
+      </div>
+      <div class="testimonial-card">
+        <p>"EduGenie helped me understand complex topics in minutes!"</p>
+        <span>— Student, Computer Science</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form Panel -->
+  <div class="auth-form-panel">
+    <div class="auth-form-wrap">
+      <div class="auth-form-header">
+        <h1>Create account</h1>
+        <p>Free forever. No credit card required.</p>
+      </div>
+      <form id="signupForm" class="auth-form">
+        <div class="input-wrap">
+          <i class="fas fa-user input-icon"></i>
+          <input type="text" id="username" name="username" required minlength="3" placeholder="Username">
+        </div>
+        <div class="input-wrap">
+          <i class="fas fa-envelope input-icon"></i>
+          <input type="email" id="email" name="email" required placeholder="Email address">
+        </div>
+        <div class="input-wrap">
+          <i class="fas fa-lock input-icon"></i>
+          <input type="password" id="password" name="password" required minlength="6" placeholder="Password">
+          <button type="button" class="toggle-pw" aria-label="Toggle password"><i class="fas fa-eye"></i></button>
+        </div>
+        <div class="password-strength" id="passwordStrength">
+          <div class="strength-bar"><div class="strength-fill" id="strengthFill"></div></div>
+          <span class="strength-text" id="strengthText">Password strength</span>
+        </div>
+        <div class="input-wrap">
+          <i class="fas fa-lock input-icon"></i>
+          <input type="password" id="confirm_password" name="confirm_password" required minlength="6" placeholder="Confirm password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-auth" id="signupBtn">
+          <span>Create Account</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <p class="auth-switch">Already have an account? <a href="/login">Sign in</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block extra_js %}<script src="/static/js/auth.js"></script>{% endblock %}

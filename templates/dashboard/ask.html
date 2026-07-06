@@ -1,0 +1,45 @@
+{% extends "dashboard/base_dashboard.html" %}
+{% block title %}Ask AI - {{ app_name }}{% endblock %}
+{% block dashboard_content %}
+<div class="chat-page">
+  <div class="chat-header">
+    <div>
+      <h1><i class="fas fa-comments"></i> Ask AI</h1>
+      <p class="page-desc">Your intelligent study companion — ask anything</p>
+    </div>
+    <div class="chat-actions">
+      <button class="btn btn-ghost btn-sm" id="clearChat"><i class="fas fa-trash"></i> Clear</button>
+      <button class="btn btn-ghost btn-sm" id="downloadChat" disabled><i class="fas fa-download"></i> Download</button>
+    </div>
+  </div>
+
+  <div class="chat-container">
+    <div class="chat-messages" id="chatMessages">
+      <div class="welcome-message">
+        <div class="welcome-icon"><i class="fas fa-robot"></i></div>
+        <h2>How can I help you learn today?</h2>
+        <p>Ask any educational question and get structured answers with examples and key takeaways.</p>
+        <div class="suggested-prompts" id="suggestedPrompts">
+          <button class="prompt-chip" data-prompt="Explain Newton's laws of motion with examples">Newton's Laws</button>
+          <button class="prompt-chip" data-prompt="What is machine learning and how does it work?">Machine Learning</button>
+          <button class="prompt-chip" data-prompt="Describe the water cycle for a 10-year-old">Water Cycle</button>
+          <button class="prompt-chip" data-prompt="What are the key events of World War II?">World War II</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input-area">
+      <div class="chat-options">
+        <label class="checkbox stream-toggle"><input type="checkbox" id="useStream" checked> <i class="fas fa-bolt"></i> Stream response</label>
+      </div>
+      <div class="chat-input-row">
+        <button class="icon-btn" id="speechBtn" aria-label="Speech to text"><i class="fas fa-microphone"></i></button>
+        <textarea id="questionInput" rows="1" placeholder="Ask an educational question..." aria-label="Question"></textarea>
+        <button class="icon-btn" id="ttsBtn" aria-label="Text to speech" title="Read last response"><i class="fas fa-volume-up"></i></button>
+        <button class="btn btn-primary send-btn" id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block page_js %}<script src="/static/js/ask.js"></script>{% endblock %}

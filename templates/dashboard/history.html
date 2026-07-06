@@ -1,0 +1,70 @@
+{% extends "dashboard/base_dashboard.html" %}
+{% block title %}History - {{ app_name }}{% endblock %}
+{% block dashboard_content %}
+<div class="feature-page">
+  <div class="page-header">
+    <h1><i class="fas fa-history"></i> History & Bookmarks</h1>
+    <p>Review past interactions and saved responses</p>
+  </div>
+
+  <div class="history-toolbar">
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="search" id="historySearch" placeholder="Search history..." aria-label="Search history">
+    </div>
+    <button class="btn btn-ghost btn-sm" id="deleteHistory"><i class="fas fa-trash"></i> Clear History</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="history">History</button>
+    <button class="tab" data-tab="bookmarks">Bookmarks</button>
+  </div>
+
+  <div class="tab-content" id="historyTab">
+    {% if history %}
+    <div class="history-list">
+      {% for item in history %}
+      <div class="history-item card" data-type="{{ item.type }}">
+        <div class="history-meta">
+          <span class="badge badge-{{ item.type }}">{{ item.type }}</span>
+          <span class="history-date">{{ item.created_at[:16] }}</span>
+          {% if item.model %}<span class="history-model">{{ item.model }}</span>{% endif %}
+        </div>
+        <h4>{{ item.text[:100] }}{% if item.text|length > 100 %}...{% endif %}</h4>
+        {% if item.response %}
+        <p class="history-preview">{{ item.response[:200] }}...</p>
+        <div class="history-actions">
+          <button class="btn btn-ghost btn-sm bookmark-btn" data-query-id="{{ item.query_id }}">
+            <i class="fas fa-bookmark"></i> Bookmark
+          </button>
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state card"><i class="fas fa-inbox"></i><p>No history yet. Start using EduGenie!</p></div>
+    {% endif %}
+  </div>
+
+  <div class="tab-content hidden" id="bookmarksTab">
+    {% if bookmarks %}
+    <div class="history-list">
+      {% for bm in bookmarks %}
+      <div class="history-item card">
+        <div class="history-meta">
+          <span class="badge badge-{{ bm.type }}">{{ bm.type }}</span>
+          <span class="history-date">{{ bm.created_at[:16] }}</span>
+        </div>
+        <h4>{{ bm.title }}</h4>
+        <p class="history-preview">{{ bm.response }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state card"><i class="fas fa-bookmark"></i><p>No bookmarks yet.</p></div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
+{% block page_js %}<script src="/static/js/history.js"></script>{% endblock %}

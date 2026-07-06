@@ -1,0 +1,21 @@
+<header class="topbar">
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="search-box">
+    <i class="fas fa-search"></i>
+    <input type="search" placeholder="Search history..." id="globalSearch" aria-label="Search">
+  </div>
+  <div class="topbar-actions">
+    <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+      <i class="fas fa-moon"></i>
+    </button>
+    <button class="icon-btn" aria-label="Notifications">
+      <i class="fas fa-bell"></i>
+    </button>
+    <a href="/profile" class="profile-btn">
+      <div class="avatar">{{ user.UserName[0]|upper }}</div>
+      <span>{{ user.UserName }}</span>
+    </a>
+  </div>
+</header>

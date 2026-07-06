@@ -1,0 +1,38 @@
+{% extends "dashboard/base_dashboard.html" %}
+{% block title %}Explain - {{ app_name }}{% endblock %}
+{% block dashboard_content %}
+<div class="feature-page">
+  <div class="page-header">
+    <h1><i class="fas fa-lightbulb"></i> Concept Explanation</h1>
+    <p>Understand difficult topics with LaMini-Flan-T5 (offline-capable)</p>
+  </div>
+
+  <div class="feature-layout">
+    <div class="input-panel card">
+      <div class="form-group">
+        <label for="topicInput">Topic or Concept</label>
+        <input type="text" id="topicInput" placeholder="e.g., Photosynthesis, Recursion, Quantum Physics">
+      </div>
+      <div class="form-group">
+        <label>Difficulty Level</label>
+        <div class="level-selector">
+          <button class="level-btn active" data-level="beginner">Beginner</button>
+          <button class="level-btn" data-level="intermediate">Intermediate</button>
+          <button class="level-btn" data-level="advanced">Advanced</button>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-block" id="explainBtn">
+        <i class="fas fa-magic"></i> Generate Explanation
+      </button>
+    </div>
+
+    <div class="output-panel card" id="explainOutput">
+      <div class="empty-state">
+        <i class="fas fa-lightbulb"></i>
+        <p>Enter a topic and select a difficulty level to get started.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block page_js %}<script src="/static/js/explain.js"></script>{% endblock %}

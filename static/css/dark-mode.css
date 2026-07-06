@@ -1,0 +1,5 @@
+[data-theme="dark"] .landing-nav { background: rgba(15,23,42,0.9); }
+[data-theme="dark"] .hero { background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 50%, #0F172A 100%); }
+[data-theme="dark"] .feature-card { border-color: var(--border); }
+[data-theme="dark"] .chat-messages { background: var(--bg); }
+[data-theme="dark"] .message.assistant .message-content { background: var(--bg-secondary); }

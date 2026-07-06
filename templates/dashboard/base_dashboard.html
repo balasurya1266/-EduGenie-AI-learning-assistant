@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block extra_css %}<link rel="stylesheet" href="/static/css/dashboard.css">{% endblock %}
+{% block body %}
+<div class="dashboard-layout">
+  {% include "components/sidebar.html" %}
+  <div class="dashboard-main">
+    {% include "components/navbar.html" %}
+    <main class="dashboard-content">
+      {% block dashboard_content %}{% endblock %}
+    </main>
+  </div>
+</div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+{% endblock %}
+{% block extra_js %}
+<script src="/static/js/speech.js"></script>
+<script>
+document.getElementById('sidebarToggle')?.addEventListener('click', () => {
+  document.getElementById('sidebar').classList.add('open');
+  document.getElementById('sidebarOverlay').classList.add('show');
+});
+document.getElementById('sidebarClose')?.addEventListener('click', closeSidebar);
+document.getElementById('sidebarOverlay')?.addEventListener('click', closeSidebar);
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('sidebarOverlay').classList.remove('show');
+}
+document.getElementById('globalSearch')?.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && e.target.value.trim()) {
+    window.location.href = '/history?q=' + encodeURIComponent(e.target.value.trim());
+  }
+});
+</script>
+{% block page_js %}{% endblock %}
+{% endblock %}

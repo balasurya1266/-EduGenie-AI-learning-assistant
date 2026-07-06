@@ -1,0 +1,6 @@
+# Optional: install for performance testing
+# pip install -r performance/requirements-perf.txt
+locust>=2.32.0
+psutil>=6.0.0
+matplotlib>=3.8.0
+playwright>=1.49.0

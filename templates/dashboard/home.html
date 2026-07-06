@@ -1,0 +1,88 @@
+{% extends "dashboard/base_dashboard.html" %}
+{% block title %}Dashboard - {{ app_name }}{% endblock %}
+{% block dashboard_content %}
+<div class="page-header reveal">
+  <h1>Welcome back, {{ user.UserName }}!</h1>
+  <p>Here's your learning overview</p>
+</div>
+
+<div class="stats-grid reveal">
+  <div class="stat-card">
+    <div class="stat-icon" style="background: rgba(79,70,229,0.1); color: #4F46E5"><i class="fas fa-comments"></i></div>
+    <div class="stat-info"><span class="stat-value">{{ stats.questions_asked }}</span><span class="stat-label">Questions Asked</span></div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon" style="background: rgba(234,179,8,0.1); color: #EAB308"><i class="fas fa-clipboard-check"></i></div>
+    <div class="stat-info"><span class="stat-value">{{ stats.quizzes }}</span><span class="stat-label">Quizzes</span></div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon" style="background: rgba(20,184,166,0.1); color: #14B8A6"><i class="fas fa-file-alt"></i></div>
+    <div class="stat-info"><span class="stat-value">{{ stats.summaries }}</span><span class="stat-label">Summaries</span></div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon" style="background: rgba(249,115,22,0.1); color: #F97316"><i class="fas fa-route"></i></div>
+    <div class="stat-info"><span class="stat-value">{{ stats.learning_paths }}</span><span class="stat-label">Learning Paths</span></div>
+  </div>
+</div>
+
+<div class="dashboard-grid reveal">
+  <div class="card streak-card">
+    <h3><i class="fas fa-fire"></i> Learning Streak</h3>
+    <div class="streak-display">
+      <span class="streak-number">{{ stats.streak }}</span>
+      <span class="streak-label">days</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: {{ (stats.weekly_progress / stats.weekly_goal * 100) if stats.weekly_goal else 0 }}%"></div>
+    </div>
+    <p class="muted">Weekly goal: {{ stats.weekly_progress }}/{{ stats.weekly_goal }} activities</p>
+  </div>
+
+  <div class="card">
+    <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+    <div class="quick-actions">
+      <a href="/ask" class="quick-action"><i class="fas fa-comments"></i> Ask AI</a>
+      <a href="/quiz" class="quick-action"><i class="fas fa-clipboard-check"></i> Take Quiz</a>
+      <a href="/summary" class="quick-action"><i class="fas fa-file-alt"></i> Summarize</a>
+      <a href="/learning-path" class="quick-action"><i class="fas fa-route"></i> Learning Path</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3><i class="fas fa-clock"></i> Recent Activity</h3>
+    {% if stats.recent_activities %}
+    <ul class="activity-list">
+      {% for act in stats.recent_activities %}
+      <li>
+        <span class="activity-type badge-{{ act.type }}">{{ act.type }}</span>
+        <span class="activity-text">{{ act.text }}</span>
+        <span class="activity-date">{{ act.date[:10] }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <div class="empty-state"><i class="fas fa-inbox"></i><p>No activity yet. Start learning!</p></div>
+    {% endif %}
+  </div>
+
+  <div class="card">
+    <h3><i class="fas fa-trophy"></i> Badges</h3>
+    <div class="badges-grid">
+      {% for badge in stats.badges %}
+      <span class="badge-item"><i class="fas fa-medal"></i> {{ badge }}</span>
+      {% else %}
+      <p class="muted">Complete activities to earn badges!</p>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="card ai-suggestions">
+    <h3><i class="fas fa-magic"></i> AI Suggestions</h3>
+    <div class="suggestion-list">
+      <button class="suggestion" onclick="location.href='/ask'">Explain photosynthesis in simple terms</button>
+      <button class="suggestion" onclick="location.href='/quiz'">Quiz me on Python basics</button>
+      <button class="suggestion" onclick="location.href='/learning-path'">Create a ML learning roadmap</button>
+    </div>
+  </div>
+</div>
+{% endblock %}

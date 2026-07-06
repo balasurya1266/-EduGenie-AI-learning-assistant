@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}Login - {{ app_name }}{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="/static/css/auth.css">{% endblock %}
+{% block body %}
+<div class="auth-split">
+  <!-- Brand Panel -->
+  <div class="auth-brand">
+    <div class="auth-brand-bg">
+      <div class="mesh-gradient"></div>
+      <div class="floating-orb orb-1"></div>
+      <div class="floating-orb orb-2"></div>
+      <div class="floating-orb orb-3"></div>
+    </div>
+    <div class="auth-brand-content">
+      <a href="/" class="brand-logo">
+        <div class="logo-icon"><i class="fas fa-graduation-cap"></i></div>
+        <span>{{ app_name }}</span>
+      </a>
+      <h2>Learn Smarter<br>with <span class="highlight">AI</span></h2>
+      <p>Your personal AI tutor for questions, quizzes, summaries, and personalized learning paths.</p>
+      <div class="brand-features">
+        <div class="brand-feature"><i class="fas fa-check-circle"></i> AI-powered explanations</div>
+        <div class="brand-feature"><i class="fas fa-check-circle"></i> Interactive quiz generator</div>
+        <div class="brand-feature"><i class="fas fa-check-circle"></i> Personalized roadmaps</div>
+      </div>
+      <div class="brand-stats">
+        <div><strong>5</strong><span>AI Tools</span></div>
+        <div><strong>24/7</strong><span>Available</span></div>
+        <div><strong>Free</strong><span>to Start</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form Panel -->
+  <div class="auth-form-panel">
+    <div class="auth-form-wrap">
+      <div class="auth-mobile-brand">
+        <a href="/" class="brand-logo brand-logo-compact" aria-label="Go to home">
+          <div class="logo-icon"><i class="fas fa-graduation-cap"></i></div>
+          <span>{{ app_name }}</span>
+        </a>
+      </div>
+      <div class="auth-form-header">
+        <h1>Welcome back</h1>
+        <p>Sign in to continue your learning journey</p>
+      </div>
+      <div class="auth-card">
+        <form id="loginForm" class="auth-form" novalidate>
+        <div class="input-wrap">
+          <i class="fas fa-envelope input-icon"></i>
+          <input type="email" id="email" name="email" required autocomplete="email" inputmode="email" placeholder="Email address">
+        </div>
+        <div class="input-wrap">
+          <i class="fas fa-lock input-icon"></i>
+          <input type="password" id="password" name="password" required autocomplete="current-password" placeholder="Password">
+          <button type="button" class="toggle-pw" aria-label="Toggle password"><i class="fas fa-eye"></i></button>
+        </div>
+        <div class="form-row">
+          <label class="checkbox"><input type="checkbox" id="remember"> Remember me</label>
+          <a href="#" class="link-muted">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-auth" id="loginBtn">
+          <span>Sign In</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <div class="auth-divider"><span>or</span></div>
+        <div class="social-btns">
+          <button type="button" class="social-btn" disabled title="Coming soon"><i class="fab fa-google"></i> Google</button>
+          <button type="button" class="social-btn" disabled title="Coming soon"><i class="fab fa-github"></i> GitHub</button>
+        </div>
+        <p class="auth-switch">Don't have an account? <a href="/signup">Create one free</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block extra_js %}<script src="/static/js/auth.js"></script>{% endblock %}

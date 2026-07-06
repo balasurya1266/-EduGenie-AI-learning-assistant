@@ -1,0 +1,64 @@
+{% extends "dashboard/base_dashboard.html" %}
+{% block title %}Quiz - {{ app_name }}{% endblock %}
+{% block dashboard_content %}
+<div class="feature-page" id="quizApp">
+  <div class="page-header">
+    <h1><i class="fas fa-clipboard-check"></i> Quiz Generator</h1>
+    <p>Test your knowledge with AI-generated MCQs</p>
+  </div>
+
+  <!-- Setup Phase -->
+  <div class="card quiz-setup" id="quizSetup">
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="quizTopic">Topic</label>
+        <input type="text" id="quizTopic" placeholder="e.g., Python, World History, Biology">
+      </div>
+      <div class="form-group">
+        <label for="quizDifficulty">Difficulty</label>
+        <select id="quizDifficulty">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="quizCount">Number of Questions</label>
+        <input type="number" id="quizCount" value="5" min="1" max="20">
+      </div>
+    </div>
+    <button class="btn btn-primary" id="generateQuizBtn"><i class="fas fa-play"></i> Generate Quiz</button>
+  </div>
+
+  <!-- Quiz Phase -->
+  <div class="quiz-active hidden" id="quizActive">
+    <div class="quiz-header-bar">
+      <div class="quiz-progress">
+        <div class="progress-bar"><div class="progress-fill" id="quizProgress"></div></div>
+        <span id="quizProgressText">1 / 5</span>
+      </div>
+      <div class="quiz-timer" id="quizTimer"><i class="fas fa-clock"></i> <span>00:00</span></div>
+    </div>
+    <div class="quiz-question card" id="quizQuestion"></div>
+    <div class="quiz-nav">
+      <button class="btn btn-ghost" id="prevQ" disabled><i class="fas fa-arrow-left"></i> Previous</button>
+      <button class="btn btn-primary" id="nextQ">Next <i class="fas fa-arrow-right"></i></button>
+      <button class="btn btn-accent hidden" id="submitQuiz">Submit Quiz</button>
+    </div>
+  </div>
+
+  <!-- Results Phase -->
+  <div class="quiz-results hidden card" id="quizResults">
+    <div class="results-header">
+      <div class="score-circle" id="scoreCircle">0%</div>
+      <h2>Quiz Complete!</h2>
+    </div>
+    <div id="resultsDetail"></div>
+    <div class="results-actions">
+      <button class="btn btn-primary" id="restartQuiz"><i class="fas fa-redo"></i> Restart</button>
+      <button class="btn btn-outline" id="downloadQuiz"><i class="fas fa-file-pdf"></i> Download PDF</button>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block page_js %}<script src="/static/js/quiz.js"></script>{% endblock %}
