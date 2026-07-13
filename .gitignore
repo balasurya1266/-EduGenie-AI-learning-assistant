@@ -2,6 +2,7 @@
 .env
 .env.local
 .env.*.local
+Code/.env
 
 # Python
 __pycache__/
@@ -31,6 +32,7 @@ venv/
 .venv/
 env/
 ENV/
+Code/venv/
 
 # IDE & editor
 .cursor/
@@ -54,13 +56,14 @@ desktop.ini
 htmlcov/
 
 # Local JSON database (user data – auto-created on first run)
-storage/data/*.json
+Code/storage/data/*.json
 
-# Generated performance test artifacts (scripts in performance/ are kept)
-performance/results/
+# Generated performance test artifacts (scripts in Code/performance/ are kept)
+Code/performance/results/
 
-# Generated reports at project root
+# Generated performance reports
+Code/Performance_Testing_EduGenie.pdf
 Performance_Testing_EduGenie.pdf
 
-# Uploaded documents (if stored outside storage/data)
-storage/uploads/
+# Uploaded documents
+Code/storage/uploads/

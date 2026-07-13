@@ -31,24 +31,27 @@
 ## Project Structure
 
 ```
-edugenie/
-├── main.py                 # FastAPI app entry point
-├── run.py                  # Uvicorn server runner
-├── requirements.txt
-├── .env.example
-├── app/
-│   ├── config.py           # Environment configuration
-│   ├── dependencies.py     # Auth dependencies
-│   ├── models/             # Pydantic schemas + JSON DB
-│   ├── routes/             # Page + API routes
-│   ├── services/           # Business logic
-│   ├── ai/                 # AI modules (Gemini, LaMini)
-│   ├── prompts/            # Prompt engineering
-│   └── utils/              # Security, PDF, markdown, export
-├── templates/              # Jinja2 HTML templates
-├── static/                 # CSS, JavaScript assets
-├── performance/            # Locust load tests (optional)
-└── storage/data/           # JSON database files (gitignored, auto-created)
+p8.1/
+├── Code/                   # Application source
+│   ├── main.py             # FastAPI app entry point
+│   ├── run.py              # Uvicorn server runner
+│   ├── requirements.txt
+│   ├── .env.example
+│   ├── app/
+│   │   ├── config.py       # Environment configuration
+│   │   ├── dependencies.py # Auth dependencies
+│   │   ├── models/         # Pydantic schemas + JSON DB
+│   │   ├── routes/         # Page + API routes
+│   │   ├── services/       # Business logic
+│   │   ├── ai/             # AI modules (Gemini, LaMini)
+│   │   ├── prompts/        # Prompt engineering
+│   │   └── utils/          # Security, PDF, markdown, export
+│   ├── templates/          # Jinja2 HTML templates
+│   ├── static/             # CSS, JavaScript assets
+│   ├── performance/        # Locust load tests (optional)
+│   └── storage/data/       # JSON database (gitignored, auto-created)
+├── venv/                   # Virtual environment (gitignored)
+└── .gitignore
 ```
 
 ## Quick Start
@@ -56,14 +59,14 @@ edugenie/
 ### 1. Clone and Setup
 
 ```bash
-cd p8.1
-python -m venv venv
+cd p8.1/Code
+python -m venv ../venv
 
 # Windows
-venv\Scripts\activate
+..\venv\Scripts\activate
 
 # macOS/Linux
-source venv/bin/activate
+source ../venv/bin/activate
 
 pip install -r requirements.txt
 ```
@@ -189,13 +192,13 @@ See [performance/README.md](performance/README.md) for load/stress testing with 
 
 | Included | Excluded (via `.gitignore`) |
 |----------|----------------------------|
-| App source (`app/`, `templates/`, `static/`) | `.env` (secrets) |
-| `main.py`, `run.py`, `requirements.txt` | `venv/` |
-| `performance/` test scripts | `performance/results/` (generated reports) |
-| `.env.example`, `LICENSE`, `README.md` | `storage/data/*.json` (user data) |
+| `Code/` app source (`app/`, `templates/`, `static/`) | `Code/.env` (secrets) |
+| `Code/main.py`, `Code/run.py`, `Code/requirements.txt` | `venv/` |
+| `Code/performance/` test scripts | `Code/performance/results/` (generated reports) |
+| `Code/.env.example`, `Code/README.md` | `Code/storage/data/*.json` (user data) |
 | | `__pycache__/`, `.cursor/` |
 
-The `performance/` folder **is included** — only the test scripts (`locustfile.py`, `run_tests.py`, etc.). Generated PDFs, HTML reports, and CSV outputs are not committed.
+The `Code/performance/` folder **is included** — only the test scripts (`locustfile.py`, `run_tests.py`, etc.). Generated PDFs, HTML reports, and CSV outputs are not committed.
 
 ### Steps
 
@@ -216,7 +219,7 @@ git branch -M main
 git push -u origin main
 ```
 
-JSON database files in `storage/data/` are created automatically on first run — no need to commit them.
+JSON database files in `Code/storage/data/` are created automatically on first run — no need to commit them.
 
 ## Deployment
 
@@ -236,9 +239,9 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4
 ```dockerfile
 FROM python:3.11-slim
 WORKDIR /app
-COPY requirements.txt .
+COPY Code/requirements.txt .
 RUN pip install -r requirements.txt
-COPY . .
+COPY Code/ .
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
 

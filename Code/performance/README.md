@@ -2,9 +2,12 @@
 
 Load, stress, and spike tests for EduGenie using [Locust](https://locust.io/).
 
+Run all commands from the `Code/` directory.
+
 ## Setup
 
 ```bash
+cd Code
 pip install -r performance/requirements-perf.txt
 playwright install chromium   # optional, for PDF screenshots
 ```
@@ -15,7 +18,7 @@ playwright install chromium   # optional, for PDF screenshots
 2. Run tests: `python performance/run_tests.py`
 3. Generate PDF report: `python performance/generate_pdf_report.py`
 
-Results are written to `performance/results/` (gitignored).
+Results are written to `Code/performance/results/` (gitignored).
 
 ## Endpoints tested
 
