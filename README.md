@@ -258,6 +258,4 @@ JSON collections following the ER diagram:
 - `documents.json` - RAG document embeddings
 - `analytics.json` - User statistics
 
-## License
 
-MIT License - Built for educational purposes and Google Cloud Generative AI Internship portfolio.
