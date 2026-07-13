@@ -1,0 +1,16 @@
+[
+  {
+    "UserID": "ef4b4b62-dfa7-4f53-8aad-a213f8b72262",
+    "UserName": "testuser",
+    "Email": "test@test.com",
+    "PasswordHash": "$2b$12$wRXP3Zc6xyyRnD5bReFeZ.OPG2LL7wBO3WRRVNEGmjheTQqCX/2te",
+    "CreatedAt": "2026-06-29T06:31:10.890573+00:00"
+  },
+  {
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "UserName": "bwe",
+    "Email": "b@gmail.com",
+    "PasswordHash": "$2b$12$h9ibH1fizvToNowQcG6XxOhSSXhcPZEPoM6EXE291vx5RlIPaNT4K",
+    "CreatedAt": "2026-06-29T06:35:41.525419+00:00"
+  }
+]

@@ -1,0 +1,219 @@
+[
+  {
+    "QueryID": "07c84099-2e3e-47a4-9f15-b852abf43fda",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "qa",
+    "QueryText": "what is python",
+    "CreatedAt": "2026-06-29T06:44:48.123509+00:00"
+  },
+  {
+    "QueryID": "dac84a94-bb71-4a46-8162-f3d1c0bb54dc",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "qa",
+    "QueryText": "What is machine learning and how does it work?",
+    "CreatedAt": "2026-06-29T06:46:51.571155+00:00"
+  },
+  {
+    "QueryID": "4ef9dc6b-4ce0-4859-8bb9-e9c9eb3c78a4",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "qa",
+    "QueryText": "What is machine learning and how does it work?",
+    "CreatedAt": "2026-06-29T06:46:58.922059+00:00"
+  },
+  {
+    "QueryID": "91ec31a1-ac11-45ff-9da4-d9f78ec7198a",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "qa",
+    "QueryText": "What is machine learning and how does it work?",
+    "CreatedAt": "2026-06-29T06:51:11.055713+00:00"
+  },
+  {
+    "QueryID": "b05ade95-f6a4-4460-b042-69afd8219f5b",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "qa",
+    "QueryText": "What is machine learning and how does it work?",
+    "CreatedAt": "2026-06-29T06:51:59.783122+00:00"
+  },
+  {
+    "QueryID": "b9d82161-7b62-49d9-a84b-0ae27dc25ecb",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "quiz",
+    "QueryText": "python (medium, 5Q)",
+    "CreatedAt": "2026-06-29T06:52:47.672686+00:00"
+  },
+  {
+    "QueryID": "61b08f1e-6311-496f-8381-1b48d6a7ed8f",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "learn",
+    "QueryText": "full stack",
+    "CreatedAt": "2026-06-29T06:54:24.250376+00:00"
+  },
+  {
+    "QueryID": "cb106e7d-baab-4d3d-b926-ba101b6698a1",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "qa",
+    "QueryText": "What are the key events of World War II?",
+    "CreatedAt": "2026-06-29T10:19:11.698766+00:00"
+  },
+  {
+    "QueryID": "93e7b7ba-0e8f-4e30-90ca-5175c315cea8",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "quiz",
+    "QueryText": "python (hard, 5Q)",
+    "CreatedAt": "2026-06-29T10:19:42.196765+00:00"
+  },
+  {
+    "QueryID": "ca55717d-082c-4555-a01c-51ae52aa2340",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "explain",
+    "QueryText": "git",
+    "CreatedAt": "2026-06-29T10:20:49.093825+00:00"
+  },
+  {
+    "QueryID": "0e4f5272-7700-4309-ba44-8e4af9476e5e",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "explain",
+    "QueryText": "git",
+    "CreatedAt": "2026-06-29T10:21:12.651323+00:00"
+  },
+  {
+    "QueryID": "347ac325-8f3c-4c90-8d70-4d235b5dc783",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "learn",
+    "QueryText": "DSA",
+    "CreatedAt": "2026-06-29T10:22:50.452635+00:00"
+  },
+  {
+    "QueryID": "8c9d0846-316a-41cf-b829-9689997d8855",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "qa",
+    "QueryText": "Explain Newton's laws of motion with examples",
+    "CreatedAt": "2026-07-05T17:38:08.082602+00:00"
+  },
+  {
+    "QueryID": "7efdd880-3cd7-44bd-b4f9-2f05083fc744",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "explain",
+    "QueryText": "recursion",
+    "CreatedAt": "2026-07-09T11:29:03.974746+00:00"
+  },
+  {
+    "QueryID": "10f5d347-0bf6-4bd4-abc2-9cdd84fbde52",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "explain",
+    "QueryText": "recursion",
+    "CreatedAt": "2026-07-09T11:29:09.917992+00:00"
+  },
+  {
+    "QueryID": "eb8817ba-7650-4c4b-88b5-6cab35f4866d",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "explain",
+    "QueryText": "recursion",
+    "CreatedAt": "2026-07-09T11:49:56.913550+00:00"
+  },
+  {
+    "QueryID": "3cf8e62a-666a-40f0-9fcd-ac93e1afbae6",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "explain",
+    "QueryText": "recursion",
+    "CreatedAt": "2026-07-09T11:51:36.419597+00:00"
+  },
+  {
+    "QueryID": "dfb17bc8-565e-448b-8036-0f4c179fec3d",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "qa",
+    "QueryText": "Explain Newton's laws of motion with examples",
+    "CreatedAt": "2026-07-09T11:55:42.477676+00:00"
+  },
+  {
+    "QueryID": "8e4380c0-da0e-4b4d-ac5b-b7d8cab67182",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "qa",
+    "QueryText": "Explain Newton's laws of motion with examples",
+    "CreatedAt": "2026-07-09T11:56:53.878711+00:00"
+  },
+  {
+    "QueryID": "e9374c37-3130-4b1c-8097-4dbcaf5db9b3",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "qa",
+    "QueryText": "Explain Newton's laws of motion with examples",
+    "CreatedAt": "2026-07-09T11:57:41.921908+00:00"
+  },
+  {
+    "QueryID": "1dc5b5fd-1fd8-456f-9f83-9ab5af0c906a",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "qa",
+    "QueryText": "What is machine learning and how does it work?",
+    "CreatedAt": "2026-07-09T11:58:12.035367+00:00"
+  },
+  {
+    "QueryID": "cb1bca79-79b2-44e6-882a-46cca9fa93ea",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "qa",
+    "QueryText": "What is machine learning and how does it work?",
+    "CreatedAt": "2026-07-09T11:59:10.372451+00:00"
+  },
+  {
+    "QueryID": "4474e31d-9633-4bd1-8d65-4876c00d4b84",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "qa",
+    "QueryText": "What is machine learning and how does it work?",
+    "CreatedAt": "2026-07-09T12:18:08.685801+00:00"
+  },
+  {
+    "QueryID": "9a4cfd3c-678b-4d94-b2e7-736d75442864",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "qa",
+    "QueryText": "What is machine learning and how does it work?",
+    "CreatedAt": "2026-07-09T12:20:54.548740+00:00"
+  },
+  {
+    "QueryID": "94a3b1c8-0300-4c63-a326-0982898ac477",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "explain",
+    "QueryText": "recursion",
+    "CreatedAt": "2026-07-09T12:21:18.889342+00:00"
+  },
+  {
+    "QueryID": "c1a4de40-adc9-4251-b18f-58f276abf1d9",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "quiz",
+    "QueryText": "python (medium, 5Q)",
+    "CreatedAt": "2026-07-09T12:24:13.592104+00:00"
+  },
+  {
+    "QueryID": "0d2162e9-befa-424b-b8d6-8ac31b5f7f68",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "qa",
+    "QueryText": "What is machine learning and how does it work?",
+    "CreatedAt": "2026-07-09T12:39:19.572532+00:00"
+  },
+  {
+    "QueryID": "d6db6318-16f2-4e7c-b434-38b67d700077",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "explain",
+    "QueryText": "recursion",
+    "CreatedAt": "2026-07-09T12:39:53.667921+00:00"
+  },
+  {
+    "QueryID": "33293bf0-cca3-48d8-a9b3-beb022302158",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "quiz",
+    "QueryText": "python (medium, 5Q)",
+    "CreatedAt": "2026-07-09T12:43:00.128363+00:00"
+  },
+  {
+    "QueryID": "3a9c23c0-e954-47b4-9d84-58cf15dd2aca",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "learn",
+    "QueryText": "full stack",
+    "CreatedAt": "2026-07-09T12:44:43.745102+00:00"
+  },
+  {
+    "QueryID": "912355d7-7f59-421a-a375-83653f2b7005",
+    "UserID": "0a9c7cbb-fc51-4f55-aa87-d9f78f5e8164",
+    "QueryType": "qa",
+    "QueryText": "What is machine learning and how does it work?",
+    "CreatedAt": "2026-07-13T06:45:15.530436+00:00"
+  }
+]
